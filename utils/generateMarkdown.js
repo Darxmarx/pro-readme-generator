@@ -2,11 +2,10 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let badge = "";
-  if (license === "Apache") {
-    badge = "![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
-  }
-  if (license === "MIT") {
-    badge = "![license](https://img.shields.io/badge/License-MIT-green.svg)";
+  if (`${license}` === "MIT") {
+    badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+  } else if (`${license}` === "Apache 2.0") {
+    badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
   }
   return badge;
 }
@@ -15,11 +14,8 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let link = "";
-  if (license === "Apache") {
-    link = "https://choosealicense.com/licenses/apache-2.0/";
-  }
-  if (license === "MIT"){
-    link = "https://choosealicense.com/licenses/mit/";
+  if (`${license}` !== "None") {
+    link = "- [License](#license)";
   }
   return link;
 }
@@ -28,10 +24,8 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let render = "";
-  if (license === "None") {
-    render = "";
-  } else {
-    render = `License ${license}`
+  if (`${license}` !== "None") {
+    render = "## License"
   }
   return render;
 }
@@ -42,35 +36,43 @@ function generateMarkdown(data) {
   # ${data.title}
 
   ## Table of Contents
+
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
   - [Testing](#testing)
   - [Contact](#contact)
-  - [License](#license)
+  ${renderLicenseLink(data.license)}
 
   ## Description
+
   ${data.description}
   
   ## Installation
+
   ${data.installation}
   
   ## Usage
+
   ${data.usage}
   
   ## Contribution
+
   ${data.contribution}
   
   ## Testing
+
   ${data.test}
 
   ## Contact
+
   - Github: [${data.github}](https://github.com/${data.github})
   - Email: ${data.email}
 
-  ## ${renderLicenseSection(data.license)} 
-  ${renderLicenseBadge(data.license)} ${renderLicenseLink(data.license)}
+  ${renderLicenseSection(data.license)}
+
+  ${renderLicenseBadge(data.license)}
 `;
 }
 

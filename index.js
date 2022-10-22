@@ -87,7 +87,7 @@ const questions = [
         type: "checkbox",
         name: "license",
         message: "Please choose which license your project used.",
-        choices: ["Apache", "MIT", "None"],
+        choices: ["Apache 2.0", "MIT", "None"],
         validate: licenseInput => {
             if (licenseInput) {
                 return true;
@@ -113,7 +113,7 @@ const questions = [
     { // project owner email
         type: "input",
         name: "email",
-        message: "Optional: Please enter your email.",
+        message: "Please enter your email.",
     },
 ];
 

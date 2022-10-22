@@ -1,7 +1,8 @@
 
-  # Sample Project
+  # Cool Project
 
   ## Table of Contents
+
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -10,24 +11,31 @@
   - [Contact](#contact)
   - [License](#license)
 
-  ## Description:
-  Check it out! It's a sample README!
+  ## Description
+
+  It's cool!
   
   ## Installation
-  Type correctly!
+
+  You must be cool!
   
   ## Usage
-  To be a nice sample!
+
+  It helps you stay cool!
   
-  ## Contribution:
-  Donate!
+  ## Contribution
+
+  Be cool to each other!
   
-  ## Testing:
-  Using Node.js!
+  ## Testing
+
+  By being cool!
 
   ## Contact
-  - Github: [myusername](https://github.com/myusername)
-  - Email: myemail@email.com
 
-  ## License MIT 
-   
+  - Github: [coolgituser](https://github.com/coolgituser)
+  - Email: cool@cool.cool
+
+  ## License
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
