@@ -5,7 +5,11 @@ const utils = require("utils") //utils folder
 
 // TODO: Create an array of questions for user input
 const questions = [
-    
+    {
+        type: "input",
+        name: "title",
+        message: "What is your project's title?",
+    }
 ];
 
 // TODO: Create a function to write README file
