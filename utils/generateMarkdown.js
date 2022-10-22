@@ -13,7 +13,16 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  let link = "";
+  if (license === "Apache") {
+    link = "https://choosealicense.com/licenses/apache-2.0/";
+  }
+  if (license === "MIT"){
+    link = "https://choosealicense.com/licenses/mit/";
+  }
+  return link;
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
