@@ -3,10 +3,10 @@
 function renderLicenseBadge(license) {
   let badge = "";
   if (license === "Apache") {
-    badge = "![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
+    badge = "![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
   }
   if (license === "MIT") {
-    badge = "![GitHub license](https://img.shields.io/badge/License-MIT-green.svg)";
+    badge = "![license](https://img.shields.io/badge/License-MIT-green.svg)";
   }
   return badge;
 }
@@ -50,7 +50,7 @@ function generateMarkdown(data) {
   - [Contact](#contact)
   - [License](#license)
 
-  ## Description:
+  ## Description
   ${data.description}
   
   ## Installation
@@ -59,10 +59,10 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   
-  ## Contribution:
+  ## Contribution
   ${data.contribution}
   
-  ## Testing:
+  ## Testing
   ${data.test}
 
   ## Contact
