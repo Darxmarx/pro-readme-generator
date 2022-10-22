@@ -87,7 +87,7 @@ const questions = [
         type: "checkbox",
         name: "license",
         message: "Please choose which license your project used.",
-        choices ["Apache", "MIT"],
+        choices: ["Apache", "MIT"],
         validate: licenseInput => {
             if (licenseInput) {
                 return true;
@@ -96,6 +96,24 @@ const questions = [
                 return false;
             }
         }
+    },
+    { // project owner github
+        type: "input",
+        name: "github",
+        message: "Please enter your GitHub username.",
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log("You must input a valid GitHub username.");
+                return false;
+            }
+        }
+    },
+    { // project owner email
+        type: "input",
+        name: "email",
+        message: "Optional: Please enter your email.",
     },
 ];
 
