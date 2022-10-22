@@ -5,7 +5,7 @@ const utils = require("utils") //utils folder
 
 // TODO: Create an array of questions for user input
 const questions = [
-    {
+    { // project title
         type: "input",
         name: "title",
         message: "What is your project's title?",
@@ -18,7 +18,7 @@ const questions = [
             }
         }
     },
-    {
+    { //project description
         type: "input",
         name: "description",
         message: "Please provide a description for your project.",
@@ -31,7 +31,7 @@ const questions = [
             }
         }
     },
-    {
+    { //project installation
         type: "input",
         name: "installation",
         message: "What must be done to install your project?",
@@ -44,7 +44,7 @@ const questions = [
             }
         }
     },
-    {
+    { // project usage
         type: "input",
         name: "usage",
         message: "What is the usage of this project?",
@@ -57,7 +57,7 @@ const questions = [
             }
         }
     },
-    {
+    { //project contribution
         type: "input",
         name: "contribution",
         message: "How can other users contribute to this project?",
@@ -66,6 +66,33 @@ const questions = [
                 return true;
             } else {
                 console.log("Please describe how users may contribute to your project.");
+                return false;
+            }
+        }
+    },
+    { //project testing
+        type: "input",
+        name: "test",
+        message: "How do you test this project?",
+        validate: testInput => {
+            if (testInput) {
+                return true;
+            } else {
+                console.log("Please describe how to test this project.");
+                return false;
+            }
+        }
+    },
+    { //project license
+        type: "checkbox",
+        name: "license",
+        message: "Please choose which license your project used.",
+        choices ["Apache", "MIT"],
+        validate: licenseInput => {
+            if (licenseInput) {
+                return true;
+            } else {
+                console.log("Please select a license.");
                 return false;
             }
         }
