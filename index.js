@@ -87,7 +87,7 @@ const questions = [
         type: "checkbox",
         name: "license",
         message: "Please choose which license your project used.",
-        choices: ["Apache", "MIT"],
+        choices: ["Apache", "MIT", "None"],
         validate: licenseInput => {
             if (licenseInput) {
                 return true;
